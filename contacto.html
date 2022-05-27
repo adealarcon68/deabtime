@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito+Sans:wght@300&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/estiprueba.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="imagenes/FAVI_LOGOweb-03.ico" alt="Home" width=300>
+    <link rel="stylesheet" href="estilos/estiprueba.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <script>
+        var formulario;
+        function iniciar() {
+            var boton = document.getElementById("enviar");
+            boton.addEventListener("click", enviarformulario);
+            formulario = document.querySelector("form[name='formContacto']");
+            formulario.addEventListener("invalid", validacion, true);
+            formulario.addEventListener("input", comprobar);
+        }
+        
+        function validacion(evento) {
+            var elemento = evento.target;
+            elemento.style.background = "#FFDDDD";
+        }
+
+        function comprobar(evento) {
+            var elemento = evento.target;
+            if (elemento.validity.valid) {
+                elemento.style.background = "#FFFFFF";
+            } else {
+                elemento.style.background = "#FFDDDD";
+            }
+        }
+        window.addEventListener("load", iniciar);
+
+        function enviarformulario() {
+            var elemento = document.getElementById("fecha");
+            var valido = formulario.checkValidity();
+            if (valido) {
+                formulario.submit();
+            } else if (elemento.validity.patternMismatch ||
+                elemento.validity.valueMissing) {
+                alert('Fecha invalida');
+            }
+        
+            var elemento = document.getElementById("cliente");
+            var valido = formulario.checkValidity();
+            if (valido) {
+                formulario.submit();
+            } else {
+                alert('Ingrese un cliente valido');
+            }
+
+            var elemento = document.getElementById("detalle");
+            var valido = formulario.checkValidity();
+            if (valido) {
+                formulario.submit();
+            } else {
+                alert('Complete el detalle de la tarea');
+            }
+
+            
+        } 
+    </script>
+
+    <title>DEAB Time</title>
+</head>
+<body>
+
+    <header>  
+        <img src="imagenes/LOGOweb-03.png" alt="Logo" width=80>
+        <h1 class="animate__animated animate__zoomIn">DEAB Time</h1>
+    </header>
+    
+    <script src="cronometro.js" > </script>
+
+    <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a href="comenzando.html">A Trabajar</a>
+        <a href="ejemplo.html">Ejemplo</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="section" id="seccion_Contacto">
+   
+        
+           <form name="formContacto" id="formulario_contacto" method="get" action="procesar.php">     
+
+            <div id="marco_dato_personales">
+                <div class="elem_t1" id="dato_per_1">
+                    <p><label>Nombre: <input type="text" name="nombre" 
+                    id="nombre"  maxlength="30"  form="formulario_contacto" placeholder="Introduce tu hombre"  ></label></p>
+                </div>
+           
+                <div class="elem_t1"  id="dato_per_2">
+                    <p><label>Apellido: <input type="text" name="apellido"
+                    id="apellido" maxlength="30" placeholder="Introduce tu apellido" required form="formulario_contacto"></label></p>
+                </div>
+
+                <div class="elem_t1"  id="dato_per_3">
+                    <p><label>Fecha Nacimiento: <input type="date" name="fechanac"
+                    id="fechanac"  placeholder="Introduce tu fecha de Nacimiento" required form="formulario_contacto"></label></p>
+                </div>
+ 
+                <div class="elem_t1"  id="dato_per_4">
+                    <p><label>E-Mail: <input type="mail" name="email"
+                    id="email"  placeholder="Introduce tu Mail" required form="formulario_contacto"></label></p>
+                </div> 
+            </div>
+
+            <div id="Comentarios_contacto">
+                <p><label>Comentarios: </label>
+                <textarea  class="form-control" name="comentarios_contacto" id="Com_contacto" required rows="6" cols="70"  form="formulario_contacto"></textarea>
+            </div>
+            <div>
+            <p><button type="button" id="enviar">Enviar</button></p>
+            </div>
+        </form>  
+    </div>
+
+    <footer>
+        <div class="footer_" id="footer1">
+            <a href="https://www.facebook.com/ani.dealarcon" class='bx bxl-facebook-circle' target="blank"></a>
+            <a href="https://instagram.com/ani.dealarcon?igshid=YmMyMTA2M2Y=" class='bx bxl-instagram' target="blank"></a>
+            <a>Derechos reservados</a>
+        </div>
+    </footer>
+</body>
+
+</html>

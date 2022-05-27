@@ -1,0 +1,267 @@
+/*font-family: 'Nunito Sans', sans-serif;
+font-family: 'Permanent Marker', cursive;*/
+* {
+    font-family: 'Montserrat', sans-serif;  
+    transition: all 0.3s; /* Copiado */
+  }
+  
+  header{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      background: #f1f1f0;
+      padding: 10px;    
+  }
+  
+  .section{
+    display: flex;
+    flex-flow: row nowrap;
+    background: #f1f1f0;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  #section_t1_gral,#section_t2_gral,#section_t3_gral {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  #formulario1, #formulario2, #formulario3  {
+    display: flex;
+    flex-flow: row wrap;
+   
+    }
+
+  .navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;  
+    margin: 0; 
+    background: #c2d2e9;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+  }
+  
+  .navigation a:hover {
+    background:#5e83ba;
+  }
+  
+  .marco {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;  
+    border-radius: 30px; 
+    padding: 10px;
+    border: 5px solid white;
+    align-items: center;
+  }
+  
+  .botones-contenedor {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .btn {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 120%;
+    padding: 20px;
+  }
+  
+  .tiempo{
+    font-size: 120%;
+    text-align: center;
+  }
+  
+  #botonenviar {
+    
+    --bs-btn-padding-y: .25rem; 
+    --bs-btn-padding-x: .5rem; 
+    --bs-btn-font-size: .75rem;
+  }
+  
+  #seccion_ejemplo {
+    border-radius: 15px solid black ;
+    background: #f1f1f0;
+    justify-content: space-around;
+    align-items: stretch;  
+    padding: 40px;
+  }
+  
+  #section_t1,#section_t3 {
+  
+    display: flex;
+    flex-flow: row nowrap;
+    border-radius: 15px solid black ;
+    background: #f1f1f0;
+    justify-content: space-between;
+    align-items: stretch;  
+  }
+  
+  #section_t2 {
+    border-radius: 15px solid black ;
+    background: #c2d2e9;
+    justify-content: space-around;
+    align-items: stretch;  
+  }
+  
+  
+  .marco_dato_tarea{
+    display: flex;  
+    flex-flow: column nowrap;
+    margin: 0px;
+    margin-top: 10px;
+    justify-content:flex-start ;
+    width: 400px;
+    padding: 10px;
+  }
+
+  .marco_detalle_tarea{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 10px;
+  }
+  
+  #marco_dato_tarea_t1,#marco_dato_tarea_t3{
+    background: #f1f1f0;
+  }
+  
+  #marco_dato_tarea_t2{
+    background: #c2d2e9;
+  }
+  
+
+  .elem_t2{
+    background-color: #5e83ba;
+    padding: 15px;
+  }
+  
+  .elem_t1{
+    padding: 15px;
+  }
+  
+  .ident_tarea{
+    margin-left: 0;
+    width: 28px;
+    font-size:large;
+    text-align: center;
+    background-color: #5e83ba; 
+  }
+  
+  /*#id_elem_t1{
+    background-color: #5e83ba; 
+  }
+  
+  #id_elem_t2{
+    background-color: #f1f1f0; 
+  }*/
+  
+  #id_elem_t3{
+    background-color: #5e83ba; 
+  }
+  .art1 {
+    flex: 1 200px;
+  }
+  
+  .art2 {
+    flex: 3 200px;
+  }
+  
+  .tiempo1{
+    display: flex;
+  }
+  
+  .footer_{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:center;
+    padding: 5px;  
+  }
+  
+  footer{
+    background-color: #5e83ba; 
+  }
+
+  #formulario_contacto {
+
+  }    
+
+  #seccion_Contacto {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:center;
+    padding: 5px;  
+    border-radius: 30px;
+   
+
+  }
+
+   @media (max-width: 768px) {
+    body {
+    background-color: #FF33FF;
+    }
+   }
+   @media (max-width: 480px) {
+    body {
+    background-color: #339933;
+    }
+   }
+   @media (max-width: 320px) {
+
+    @media all and (max-width: 800px) {
+      .navigation {
+        justify-content: space-around;
+      }
+
+      .section{
+        flex-flow: column nowrap;
+        padding: 0px;
+      }
+      
+      #section_t1_gral {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding: 5px;
+      }
+      .marco_detalle_tarea{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        margin: 0px;
+        padding: 5px;
+      }
+    }
+    
+    @media all and (max-width: 600px) {
+      .navigation {
+        flex-flow: column wrap;
+        padding: 0;
+      }
+      .navigation a { 
+        text-align: center; 
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255,0.3); 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+      }
+      .navigation li:last-of-type a {
+        border-bottom: none;
+      }
+      
+      .section{    
+        flex-flow: column nowrap;
+        padding: 0px;
+      }
+      
+      
+    }
+  
