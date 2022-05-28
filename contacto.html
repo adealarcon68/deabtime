@@ -39,7 +39,15 @@
         window.addEventListener("load", iniciar);
 
         function enviarformulario() {
-            var elemento = document.getElementById("fecha");
+            var elemento = document.getElementById("nombre","apellido");
+            var valido = formulario.checkValidity();
+            if (valido) {
+                formulario.submit();
+            } else {
+                alert('Ingrese un Nombre y Apellido valido');
+            }
+
+            var elemento = document.getElementById("fechanac");
             var valido = formulario.checkValidity();
             if (valido) {
                 formulario.submit();
@@ -48,12 +56,12 @@
                 alert('Fecha invalida');
             }
         
-            var elemento = document.getElementById("cliente");
+            var elemento = document.getElementById("email");
             var valido = formulario.checkValidity();
             if (valido) {
                 formulario.submit();
             } else {
-                alert('Ingrese un cliente valido');
+                alert('Ingrese un mail valido');
             }
 
             var elemento = document.getElementById("detalle");
@@ -61,10 +69,8 @@
             if (valido) {
                 formulario.submit();
             } else {
-                alert('Complete el detalle de la tarea');
+                alert('Complete los comentarios');
             }
-
-            
         } 
     </script>
 
@@ -86,41 +92,46 @@
         <a href="contacto.html">Contacto</a>
     </nav>
 
-    <div class="section" id="seccion_Contacto">
-   
+
+    <div class="section" id="seccion_contacto_gral">
+        <article id="art_contacto"> 
+            <img src="imagenes/imgencontacto.jpg" alt="Contacto" id="imgcontacto" width=600;>
+        </article>
         
-           <form name="formContacto" id="formulario_contacto" method="get" action="procesar.php">     
+        <div class="section" id="seccion_contacto">
+            <form name="formContacto" id="formulario_contacto" method="get" action="procesar.php">     
 
-            <div id="marco_dato_personales">
-                <div class="elem_t1" id="dato_per_1">
-                    <p><label>Nombre: <input type="text" name="nombre" 
-                    id="nombre"  maxlength="30"  form="formulario_contacto" placeholder="Introduce tu hombre"  ></label></p>
-                </div>
+                <div id="marco_dato_personales">
+                    <div class="elem_t1" id="dato_per_1">
+                        <p><label>Nombre: <input type="text" name="nombre" 
+                        id="nombre"  maxlength="30"  placeholder="Introduce tu nombre" required form="formulario_contacto" ></label></p>
+                    </div>
            
-                <div class="elem_t1"  id="dato_per_2">
-                    <p><label>Apellido: <input type="text" name="apellido"
-                    id="apellido" maxlength="30" placeholder="Introduce tu apellido" required form="formulario_contacto"></label></p>
-                </div>
+                    <div class="elem_t1"  id="dato_per_2">
+                        <p><label>Apellido: <input type="text" name="apellido"
+                        id="apellido" maxlength="30" placeholder="Introduce tu apellido" required form="formulario_contacto"></label></p>
+                    </div>
 
-                <div class="elem_t1"  id="dato_per_3">
-                    <p><label>Fecha Nacimiento: <input type="date" name="fechanac"
-                    id="fechanac"  placeholder="Introduce tu fecha de Nacimiento" required form="formulario_contacto"></label></p>
-                </div>
+                    <div class="elem_t1"  id="dato_per_3">
+                        <p><label>Fecha Nacimiento: <input type="date" name="fechanac"
+                        id="fechanac"  placeholder="Introduce tu fecha de Nacimiento" required form="formulario_contacto"></label></p>
+                    </div>
  
-                <div class="elem_t1"  id="dato_per_4">
-                    <p><label>E-Mail: <input type="mail" name="email"
-                    id="email"  placeholder="Introduce tu Mail" required form="formulario_contacto"></label></p>
-                </div> 
-            </div>
+                    <div class="elem_t1"  id="dato_per_4">
+                        <p><label>E-Mail: <input type="mail" name="email"
+                        id="email"  placeholder="Introduce tu Mail" required form="formulario_contacto"></label></p>
+                    </div> 
+                </div>
 
-            <div id="Comentarios_contacto">
-                <p><label>Comentarios: </label>
-                <textarea  class="form-control" name="comentarios_contacto" id="Com_contacto" required rows="6" cols="70"  form="formulario_contacto"></textarea>
-            </div>
-            <div>
-            <p><button type="button" id="enviar">Enviar</button></p>
-            </div>
-        </form>  
+                <div id="Comentarios_contacto">
+                    <p><label>Comentarios: &nbsp;&nbsp </label>
+                    <textarea  class="form-control" name="comentarios_contacto" id="com_contacto" required rows="6" cols="60"  form="formulario_contacto"></textarea>
+                </div>
+                <div>
+                    <p><button type="button" id="enviar">Enviar</button></p>
+                </div>
+            </form>  
+        </div>
     </div>
 
     <footer>
