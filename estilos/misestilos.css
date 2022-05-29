@@ -11,6 +11,7 @@
       padding: 10px;    
   }
   
+ 
   .section{
     display: flex;
     flex-flow: row nowrap;
@@ -19,14 +20,69 @@
     padding: 10px;
   }
   
-  #section_t1_gral,#section_t2_gral,#section_t3_gral {
+  #section_t1_gral{
     display: flex;
-    flex-flow: column nowrap;
     justify-content: space-between;
+    flex-flow: column wrap;
     padding: 5px;
   }
 
-  #formulario1,#formulario2,#formulario3  {
+  #section_t2_gral{
+   display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    padding: 5px;
+  }
+
+  #section_t3_gral{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    padding: 5px;
+  }
+
+  #section_t1{
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 15px solid black ;
+    background: #f1f1f0;
+    justify-content: space-between;
+    align-items: stretch;  
+    padding: 0px;
+  }
+
+  #section_t2{
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 15px solid black ;
+    background: #c2d2e9;
+    justify-content: space-between;
+    align-items: stretch;  
+    padding: 0px;
+    /*#c2d2e9;*/
+  }
+
+  #section_t3{
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 15px solid black ;
+    background: #f1f1f0;
+    justify-content: space-between;
+    align-items: stretch;  
+    padding: 0px;
+  }
+
+  #formulario1{
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  #formulario2{
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  #formulario3{
     display: flex;
     flex-flow: row wrap;
   }
@@ -83,35 +139,23 @@
     --bs-btn-padding-x: .5rem; 
     --bs-btn-font-size: .75rem;
   }
+ 
+
+  #seccion_ejemplo_gral{
+    background: #f1f1f0;
+    display: flex;
+    flex-flow: center;
+    justify-content:center;
+    align-items: stretch;  
+  }
   
+   
   #seccion_ejemplo {
     border-radius: 15px solid black ;
     background: #f1f1f0;
-    justify-content:center;
-    align-items: stretch;  
     padding: 40px;
   }
-  
-  #section_t1,#section_t3 {
-  
-    display: flex;
-    flex-flow: row nowrap;
-    border-radius: 15px solid black ;
-    background: #f1f1f0;
-    justify-content: space-between;
-    align-items: stretch;  
-  }
-  
-  #section_t2 {
-    display: flex;
-    flex-flow: row nowrap;
-    border-radius: 15px solid black ;
-    background: #c2d2e9;
-    justify-content: space-around;
-    align-items: stretch;  
-  }
-  
-  
+
   .marco_dato_tarea{
     display: flex;  
     flex-flow: column nowrap;
@@ -122,7 +166,7 @@
     padding: 10px;
   }
 
-  .marco_detalle_tarea{
+  .marco_detalle_tarea {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
@@ -130,12 +174,16 @@
     padding: 10px;
   }
   
-  #marco_dato_tarea_t1,#marco_dato_tarea_t3{
+  #marco_dato_tarea_t1 {
     background: #f1f1f0;
   }
   
-  #marco_dato_tarea_t2{
+  #marco_dato_tarea_t2 {
     background: #c2d2e9;
+  }
+
+  #marco_dato_tarea_t3 {
+    background: #f1f1f0;
   }
 
   .elem_t2{
@@ -157,10 +205,13 @@
   
   #id_elem_t3 {
     background-color: #5e83ba; 
+    /*margin-left: 5px;
+    margin-bottom: 5px;*/
   }
   #id_elem_t2 {
     background-color: #5e83ba; 
   }
+
   .art1 {
     flex: 1 200px;
   }
@@ -169,11 +220,11 @@
     flex: 3 200px;
   }
   
-  .tiempo1{
+  .tiempo1 {
     display: flex;
   }
   
-  .footer_{
+  .footer_ {
     display: flex;
     flex-flow: row nowrap;
     justify-content:center;
@@ -196,6 +247,12 @@
     overflow: scroll;
     resize: none;
   }
+  textarea{
+    width: 100%;
+    max-height: 200px;
+    min-height:100px;
+    max-width: 100%;
+   }
 
   #seccion_contacto_gral {
     display: flex;
@@ -218,9 +275,9 @@
      /*body {
       background-color: #ff336d;
       } */
-      .section{
+      /*.section{
         flex-flow: space-around;
-      }
+      }*/
       #imghome {
         width:100%;
       }
@@ -230,15 +287,15 @@
       #art2{
         width:50%;  
       }
-      #section_t1_gral {
+
+     /* #section_t1_gral,section_t2_gral,section_t3_gral {
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
         padding: 5px;
-      }
-      #imgcontacto {
-        width:100%;
-      }
+      }*/
+
+
       #seccion_contacto_gral {
         display: flex;
         flex-flow: row nowrap;
@@ -246,14 +303,22 @@
         padding: 5px;
         justify-items: stretch;
       } 
-   
+
+      #art_contacto{
+        width:50%;
+      }
+
+      #seccion_contacto {
+        width:50%;
+        padding: 5px; 
+      }
+      #imgcontacto {
+        width:100%;
+      }
       #formulario_contacto {
         width:100%;
       }
 
-      #seccion_contacto {
-        padding: 5px; 
-      }
   }
 
     @media all and (max-width: 800px)  and (min-width:601px) {
@@ -282,9 +347,9 @@
       #imgcontacto {
         width:100%;
       }
-      #seccion_contacto_gral {
+      /*#seccion_contacto_gral {
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content:space-between;
         padding: 5px; 
       } 
@@ -293,6 +358,18 @@
         justify-items: stretch;
         padding: 2px;
         
+      }*/
+
+      #art_contacto{
+        width:50%;
+      }
+
+      #seccion_contacto {
+        width:50%;
+        padding: 5px; 
+      }
+      #imgcontacto {
+        width:100%;
       }
       #formulario_contacto {
         width:100%;
@@ -349,12 +426,11 @@
           width:80%;
         }
         #seccion_ejemplo {
-
-          text-align: center;
-          width: 50%;
-    
-      
+          padding: 0px;
+          width: 40%;      
         }
+       
+        
 
     }
   
